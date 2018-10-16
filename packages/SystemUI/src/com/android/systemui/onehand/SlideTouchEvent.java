@@ -1,12 +1,9 @@
 package com.android.systemui.onehand;
 
-import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.RemoteException;
-import android.os.UserHandle;
-import android.provider.Settings;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.IWindowManager;
@@ -139,15 +136,12 @@ public class SlideTouchEvent {
     }
 
     private void toggleOneHandMode(float distanceX) {
-        if (Settings.System.getIntForUser(mContext.getContentResolver(),
-                Settings.System.ONE_HAND_MODE_ENABLED, 0, UserHandle.USER_CURRENT) == 1) {
-            if (distanceX > 0) {
-                sendBroadcast(EXTRA_ALIGNMENT_STATE_LEFT);
-            }
+        if (distanceX > 0) {
+            sendBroadcast(EXTRA_ALIGNMENT_STATE_LEFT);
+        }
 
-            if (distanceX < 0) {
-                sendBroadcast(EXTRA_ALIGNMENT_STATE_RIGHT);
-            }
+        if (distanceX < 0) {
+            sendBroadcast(EXTRA_ALIGNMENT_STATE_RIGHT);
         }
     }
 
