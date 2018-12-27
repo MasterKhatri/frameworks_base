@@ -4164,6 +4164,12 @@ public final class Settings {
          */
         public static final String HEADS_UP_BLACKLIST_VALUES = "heads_up_blacklist_values";
 
+        /**
+         * Double tap on lockscreen to sleep
+         * @hide
+         */
+        public static final String DOUBLE_TAP_SLEEP_LOCKSCREEN = "double_tap_sleep_lockscreen";
+
         /** Whether to allow one finger quick settings expansion on the right side of the statusbar.
          *
          * @hide
@@ -4184,43 +4190,10 @@ public final class Settings {
         public static final String HEADS_UP_NOTIFICATION_SNOOZE = "heads_up_notification_snooze";
 
         /**
-         * Whether Ambient Play enabled/disabled
-         *
-         * @hide
-         */
-        public static final String AMBIENT_RECOGNITION = "ambient_recognition";
-
-        /** @hide */
-        private static final Validator AMBIENT_RECOGNITION_VALIDATOR =
-                BOOLEAN_VALIDATOR;
-
-        /**
-         * Whether Ambient Play is shown on the lockscreen
-         *
-         * @hide
-         */
-        public static final String AMBIENT_RECOGNITION_KEYGUARD = "ambient_recognition_keyguard";
-
-        /**
          * Whether to show VoLTE icon or not
          * @hide
          */
         public static final String SHOW_VOLTE_ICON = "volte_icon";
-
-        /** @hide */
-        private static final Validator AMBIENT_RECOGNITION_KEYGUARD_VALIDATOR =
-                BOOLEAN_VALIDATOR;
-
-        /**
-         * Whether Ambient Play notification is enabled
-         *
-         * @hide
-         */
-        public static final String AMBIENT_RECOGNITION_NOTIFICATION = "ambient_recognition_notification";
-
-        /** @hide */
-        private static final Validator AMBIENT_RECOGNITION_NOTIFICATION_VALIDATOR =
-                BOOLEAN_VALIDATOR;
 
         /*
          * Whether to use smart clock or not
@@ -4337,6 +4310,29 @@ public final class Settings {
          * @hide
          */
         public static final String VOLUME_BUTTON_MUSIC_CONTROL = "volume_button_music_control";
+
+        /**
+         * 0 - fullscreen
+         * 1 - partial
+         * @hide
+         */
+        public static final String SCREENSHOT_DEFAULT_MODE = "screenshot_default_mode";
+
+        /**
+         * Whether the phone vibrates on call connect
+         * @hide
+         */
+        public static final String VIBRATE_ON_CONNECT = "vibrate_on_connect";
+         /**
+         * Whether the phone vibrates on call waiting
+         * @hide
+         */
+        public static final String VIBRATE_ON_CALLWAITING = "vibrate_on_callwaiting";
+         /**
+         * Whether the phone vibrates on disconnect
+         * @hide
+         */
+        public static final String VIBRATE_ON_DISCONNECT = "vibrate_on_disconnect";
 
         /**
          * Settings to backup. This is here so that it's in the same place as the settings
